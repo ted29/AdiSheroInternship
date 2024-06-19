@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.5.2/dist/css/glide.core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.5.2/dist/css/glide.theme.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>Painful Pleasures</h1>
+    <div class="grid-container">
+      <img
+        alt="july-sales"
+        src="images/eagle-4th-of-july.png"
+        class="grid-item1"
+      />
+      <img
+        alt="wireless-efficency"
+        src="images/wifi-charging-object.png"
+        class="grid-item2"
+      />
+      <img alt="ppe" src="images/ppe-mask.png" class="grid-item3" />
+    </div>
+
+    <div class="shopping-container">
+      <div class="shopping-item">
+        <h5>TATTO SUPPLIES</h5>
+        <img alt="tatto-supplies" src="assets/tatto-supplies.png" />
+        <button>Shop now</button>
+      </div>
+
+      <div class="shopping-item">
+        <h5>BODY JEWLERY</h5>
+        <img alt="body-jewlery" src="assets/body-jewlery.png" />
+        <button>Shop now</button>
+      </div>
+
+      <div class="shopping-item">
+        <h5>PIERCING SUPPLIES</h5>
+        <img alt="piercing-supplies" src="assets/piercing-supplies.png" />
+        <button>Shop now</button>
+      </div>
+
+      <div class="shopping-item">
+        <h5>MEDICAL SUPPLIES</h5>
+        <img alt="medical-supplies" src="assets/medical-supplies.png" />
+        <button>Shop now</button>
+      </div>
+
+      <div class="shopping-item">
+        <h5>PERMANENT SUPPLIES</h5>
+        <img alt="permanent-supplies" src="assets/permanent-supplies.png" />
+        <button>Shop now</button>
+      </div>
+    </div>
+
+    <div class="glide-container">
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <img src="carousel items/rook-quill-copper.png" alt="Product 1" />
+              <div class="product-info">
+                <p>$449.99</p>
+                <p>Rook Quill Rotary Tattoo Machine — Copper</p>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <img src="carousel items/rook-quill-blue.png" alt="Product 2" />
+              <div class="product-info">
+                <p>$449.99</p>
+                <p>Rook Quill Rotary Tattoo Machine — Blue</p>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <img src="carousel items/inkjecta-flite-x1.png" alt="Product 3" />
+              <div class="product-info">
+                <p>$1,199.99</p>
+                <p>Pre-Order — Inkjecta Flite X1 Wireless Tattoo Machine</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            ‹
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            ›
+          </button>
+        </div>
+
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+          <button class="glide__bullet" data-glide-dir="=0"></button>
+          <button class="glide__bullet" data-glide-dir="=1"></button>
+          <button class="glide__bullet" data-glide-dir="=2"></button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.5.2/dist/glide.min.js"></script>
+    <script>
+      new Glide(".glide", {
+        type: "carousel",
+        startAt: 0,
+        perView: 5,
+        autoplay: false,
+        gap: 10,
+        breakpoints: {
+          1024: {
+            perView: 4,
+          },
+          800: {
+            perView: 3,
+          },
+          600: {
+            perView: 2,
+          },
+          480: {
+            perView: 1,
+          },
+        },
+      }).mount();
+    </script>
+  </body>
+</html>
